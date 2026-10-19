@@ -1,162 +1,249 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./cv3.css">
-    <title>Mon_cv</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Kaire Mame Faty</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cv">
-   <header class="entete">
-  <div class="photo">
-    <img src="./faty.jpg" alt="Photo de profil">
-  </div>
-  <div class="identite">
-    <h1>Mame Faty Kaire</h1>
-    <p>Étudiante en Licence 2 Informatique</p>
-  </div>
-  <nav class="menu">
-    <ul>
-      <li><a href="#a_propos">À propos</a></li>
-      <li><a href="#CD">Centre d'intérêt</a></li>
-      <li><a href="#comp">Compétences</a></li>
-      <li><a href="#info">Contact</a></li>
-    </ul>
-  </nav> 
-</header>
 
+<button id="theme-toggle" title="Changer de thème">🌙</button>
+<button id="print-btn" title="Télécharger / Imprimer">🖨️ PDF</button>
 
-    <div class="bloc">
+<div class="container">
 
-      <div  class="gauche">
-        <section class="titre" id="a_propos">
-            <h2>À propos de moi</h2>
-            <p>Je suis étudiante en informatique passionnée par le développement web et 
-              l’ingénierie logicielle. J’aime créer des interfaces simples, modernes et efficaces.</p>
-       </section>
-        <section class="titre">
-        <h2>Contact</h2>
-        <p><strong>Adress :</strong> Thies , Sénégal </p>
-        <p><strong>Email :</strong> mfaty.kaire@univ-thies.sn</p>
-        <p><strong>Téléphone :</strong> +221 78 408 12 10</p>
-        <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/mamefatykaire" target="_blank">linkedin.com/in/mamefatykaire</a></p>
-      </section> 
-       <section class="titre" id="comp">
-          <h2> Compétences techniques </h2>
-            <div class="skill">
-               <p>HTML5/CSS3/GITHUB</p>
-               <div class="barre">
-               <div class="progress" style="width: 70%;">70%</div>
-               </div>
-             </div>
-        
-           <div class="skill">
-              <p>Outils Google (Docs, Sheets, Drive)</p>
-              <div class="barre">
-              <div class="progress" style="width: 80%;">80%</div>
-             </div>
-             </div>
-             <div class="skill">
-                 <p>SQL / MySQL</p>
-                    <div class="barre">
-                    <div class="progress" style="width: 70%;">70%</div>
-             </div>
-             </div>
-             <div class="skill">
-                  <p>conduit catégorie B</p>
-                  <div class="barre">
-                  <div class="progress" style="width: 50%;">50% </div>
-          </section>
-          
-         </div>
-
-         <div  class="droit">
-        <section class="titre">
-        <h2>Parcours Académiques</h2>
-        <ul>
-          <li>De 2024-2025 licence2 Informatique (en cours) <abbr title="Université Iba der Thiam">UIDT</abbr> UFR SET departement informatique </li>
-          <li>De 2023-2024 licence1 Informatique </li>
-          <li>De 2022-2023 Baccalauriat scientifique S2 lycee de mbacké  <abbr title="Baccalauriat">bac</abbr>  </a></li>
-         </ul>
-      </section>
-      <section class="titre">
-        <h2> competences linguistiques </h2>
-        <div class="skill">
-            <p>Francais</p>
-            <div class="barre">
-            <div class="progress" style="width: 90%;">90%</div>
-        </div>
-        <div class="skill">
-            <p>Arabe</p>
-            <div class="barre">
-            <div class="progress" style="width: 70%;">70%</div>
-        </div>
-        <div class="skill">
-            <p>Anglais</p>
-            <div class="barre">
-            <div class="progress" style="width: 40%;">40%</div>
-        </div>
-      </section>
-      <section class="titre">
-        <h2> Travaux realisés</h2>
-        <ul>
-          <li>Participation à un projet de Licence 2 en base de données (création d'un système de gestion des pret de livre dans un bibliotheque )</li>
-          <li>création des affiches publicitaires <a href="../projet/1.png"> exemple d'affiches</a> </li>
-          <li>création d'une site web  </li>
-        </ul>
-      </section>
-      <section class="experience">
-              <h2> Centre d'intret </h2>
-                 <ul>
-                   <li> créer des affiches publicitaires </li>
-                   <li> faire des coiffures </li>
-                   <li> naviguer sur le net  </li>
-                   <li> cuisiner </li>
-                </ul>
-          </section>
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="profile-photo">
+      <img src="assets/photo.jpg" onerror="this.onerror=null; this.src='faty.jpg';" alt="Photo de Kaire Mame Faty">
     </div>
-   </div>
 
-   <section class="contact" id="info" >
-  <h2>Vous pouvez me contacter ici en cas de besoin</h2>
-  <form>
-    <input type="text" placeholder="Nom" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-  </section>
+    <div class="sidebar-section">
+      <h2><span class="s-icon">☎️</span> Contact</h2>
+      <ul class="dash-list contact-list">
+        <li><span class="emoji">📞</span> 78 408 12 10</li>
+        <li><span class="emoji">✉️</span> <a href="mailto:mfaty.kaire@univ-thies.sn">mfaty.kaire@univ-thies.sn</a></li>
+        <li><span class="emoji">🐙</span> <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">github.com/kairetyma440-wq</a></li>
+        <li><span class="emoji">🔗</span> <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">linkedin.com/in/mamefatykaire</a></li>
+        <li><span class="emoji">📍</span> Touba, Sénégal</li>
+      </ul>
+    </div>
 
+    <div class="sidebar-section">
+      <h2><span class="s-icon">⚙️</span> Compétences clés</h2>
+
+      <h3 class="skill-group-title">Développement Web</h3>
+      <ul class="dash-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Django</li>
+        <li>Laravel</li>
+      </ul>
+
+      <h3 class="skill-group-title">Programmation</h3>
+      <ul class="dash-list">
+        <li>Java</li>
+        <li>Python / Flask</li>
+        <li>PHP</li>
+      </ul>
+
+      <h3 class="skill-group-title">Outils &amp; bases de données</h3>
+      <ul class="dash-list">
+        <li>SQL / MySQL</li>
+        <li>Git / GitHub / GitLab</li>
+        <li>Google Docs, Sheets, Drive</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <h2><span class="s-icon">🗣️</span> Langues</h2>
+      <ul class="dash-list">
+        <li>Français : Courant</li>
+        <li>Anglais : Intermédiaire</li>
+        <li>Wolof : Langue maternelle</li>
+        <li>Arabe : Intermédiaire</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <h2><span class="s-icon">🚗</span> Permis</h2>
+      <ul class="dash-list">
+        <li>Permis B — Véhicule léger</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <h2><span class="s-icon">🎯</span> Centres d'intérêt</h2>
+      <ul class="dash-list">
+        <li>Intelligence artificielle</li>
+        <li>Développement logiciel</li>
+        <li>Data &amp; technologies</li>
+        <li>Entrepreneuriat</li>
+        <li>Innovation technologique</li>
+        <li>Projets numériques</li>
+        <li>Sport</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="content">
+
+    <header class="hero">
+      <h1><span class="first">KAIRE</span><br><span class="last">MAME FATY</span></h1>
+      <p class="subtitle">DÉVELOPPEUSE FULLSTACK</p>
+    </header>
+
+    <section class="block">
+      <h2 class="block-title"><span class="icon">👤</span> Profil</h2>
+      <p>
+        Étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les
+        technologies numériques. Rigoureuse, autonome et curieuse, dotée d'un bon esprit d'analyse,
+        je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions
+        numériques répondant à des besoins concrets.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title"><span class="icon">🎓</span> Parcours académique</h2>
+
+      <div class="grid-2col">
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Licence 3 — Génie Logiciel</h3>
+            <span class="entry-date">2025 – 2026</span>
+          </div>
+          <p class="entry-sub">UIDT · UFR SET · Département Informatique</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Licence 2 — Informatique</h3>
+            <span class="entry-date">2024 – 2025</span>
+          </div>
+          <p class="entry-sub">UIDT · UFR SET · Département Informatique</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Licence 1 — Informatique</h3>
+            <span class="entry-date">2023 – 2024</span>
+          </div>
+          <p class="entry-sub">UIDT · UFR SET · Département Informatique</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Baccalauréat Scientifique — Série S2</h3>
+            <span class="entry-date">2022 – 2023</span>
+          </div>
+          <p class="entry-sub">Lycée de Mbacké</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title"><span class="icon">💼</span> Expérience / Projets</h2>
+
+      <div class="grid-2col">
+        <div class="entry">
+          <h3>Chef de Projet — Gestion des locaux</h3>
+          <ul class="dash-list">
+            <li>Conception et développement d'une application de gestion des locaux avec Flask (Python) et MySQL.</li>
+            <li>Réalisation et tests effectués sur environnement Google Colab.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Chef de Projet — Système de livraisons</h3>
+          <ul class="dash-list">
+            <li>Pilotage du projet de conception d'un système de suivi des livraisons locales.</li>
+            <li>Développement de la solution avec le langage PHP.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Stage — Point de Transaction</h3>
+          <ul class="dash-list">
+            <li>Stage pratique portant sur la gestion d'un point de transaction.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Travail collaboratif en équipe</h3>
+          <ul class="dash-list">
+            <li>Participation régulière à des projets académiques réalisés en groupe.</li>
+            <li>Développement de l'esprit d'équipe et du sens de l'organisation.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Projet Bibliothèque</h3>
+          <ul class="dash-list">
+            <li>Participation à la conception d'un système de gestion de prêt de livres (base de données).</li>
+            <li>Réalisation dans le cadre du projet de Licence 2.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Projet Java</h3>
+          <ul class="dash-list">
+            <li>Développement d'une application de planification des cours et de gestion des ressources universitaires.</li>
+            <li>Réalisation en Java dans le cadre du projet de Licence 2.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Développeuse Full-Stack</h3>
+          <ul class="dash-list">
+            <li>Réalisation d'un site web avec HTML, CSS et JavaScript.</li>
+            <li>Développement effectué dans le cadre de projets académiques.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Création graphique</h3>
+          <ul class="dash-list">
+            <li>Conception graphique d'affiches publicitaires.</li>
+            <li>Réalisation dans le cadre de projets collaboratifs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block two-col">
+      <div>
+        <h2 class="block-title"><span class="icon">⭐</span> Qualités</h2>
+        <ul class="dash-list">
+          <li>Rigoureuse</li>
+          <li>Créative</li>
+          <li>Investie dans les projets</li>
+          <li>Sens du détail</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="block-title"><span class="icon">🏆</span> Atouts</h2>
+        <ul class="dash-list">
+          <li>Esprit d'équipe</li>
+          <li>Sens de l'organisation</li>
+          <li>Expérience en gestion de projet</li>
+          <li>Autonomie</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Kaire Mame Faty — Étudiante en Génie Logiciel · Touba, Sénégal</p>
+    </footer>
+
+  </main>
 </div>
-          <script>
-    // Texte à afficher
-    const nom = "Mame Faty Kaire";
-    const element = document.getElementById("nom");
 
-    // Animation lettre par lettre
-    let i = 0;
-    function ecrireNom() {
-      if (i < nom.length) {
-        element.textContent += nom.charAt(i);
-        i++;
-        setTimeout(ecrireNom, 150); // vitesse d’écriture
-      }
-    }
-
-    ecrireNom();
-  </script>
-
-         
-
+<script src="script.js"></script>
 </body>
 </html>
-
-    
-
-   
-
-
-
-
-
