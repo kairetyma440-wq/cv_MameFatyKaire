@@ -287,6 +287,127 @@ body.dark .entry h3 { color: #e7ebf6; }
   font-size: 0.88rem;
 }
 
+/* ===================== CERTIFICATIONS ===================== */
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-item {
+  border-left: 3px solid var(--gold);
+  padding: 10px 14px;
+  background: linear-gradient(90deg, rgba(212,167,44,0.06) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cert-info h3 {
+  font-family: var(--font-head);
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+body.dark .cert-info h3 { color: #e7ebf6; }
+
+.cert-issuer {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.cert-desc {
+  font-size: 0.87rem;
+  color: #454e5c;
+  line-height: 1.55;
+  margin-bottom: 7px;
+}
+
+body.dark .cert-desc { color: #c4cbdc; }
+
+.cert-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--gold);
+  padding-bottom: 1px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.cert-link:hover {
+  color: var(--gold);
+  border-color: transparent;
+}
+
+.cert-link--doc {
+  color: var(--gold);
+  border-bottom-color: var(--navy);
+}
+
+.cert-link--doc:hover {
+  color: var(--navy);
+}
+
+body.dark .cert-link { color: var(--gold-light); }
+body.dark .cert-link--doc { color: var(--gold); }
+
+/* Print overrides for certifications */
+@media print {
+  .cert-item {
+    border-left: 3px solid #d4a72c !important;
+    background: rgba(212,167,44,0.05) !important;
+    padding: 6px 10px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .cert-info h3 {
+    font-size: 0.82rem !important;
+    color: #232a36 !important;
+  }
+  .cert-issuer {
+    font-size: 0.76rem !important;
+    color: #6b7280 !important;
+  }
+  .cert-desc {
+    font-size: 0.76rem !important;
+    color: #454e5c !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+  }
+  .cert-link {
+    font-size: 0.76rem !important;
+    color: #101c36 !important;
+  }
+  .cert-link--doc {
+    color: #d4a72c !important;
+  }
+}
+
 .footer {
   text-align: center;
   padding-top: 18px;
@@ -600,7 +721,128 @@ body.dark .two-col .dash-list li { color: #c4cbdc; }
     margin-bottom: 2px !important;
   }
 
-  .footer {
+  /* ===================== CERTIFICATIONS ===================== */
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-item {
+  border-left: 3px solid var(--gold);
+  padding: 10px 14px;
+  background: linear-gradient(90deg, rgba(212,167,44,0.06) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cert-info h3 {
+  font-family: var(--font-head);
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+body.dark .cert-info h3 { color: #e7ebf6; }
+
+.cert-issuer {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.cert-desc {
+  font-size: 0.87rem;
+  color: #454e5c;
+  line-height: 1.55;
+  margin-bottom: 7px;
+}
+
+body.dark .cert-desc { color: #c4cbdc; }
+
+.cert-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--gold);
+  padding-bottom: 1px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.cert-link:hover {
+  color: var(--gold);
+  border-color: transparent;
+}
+
+.cert-link--doc {
+  color: var(--gold);
+  border-bottom-color: var(--navy);
+}
+
+.cert-link--doc:hover {
+  color: var(--navy);
+}
+
+body.dark .cert-link { color: var(--gold-light); }
+body.dark .cert-link--doc { color: var(--gold); }
+
+/* Print overrides for certifications */
+@media print {
+  .cert-item {
+    border-left: 3px solid #d4a72c !important;
+    background: rgba(212,167,44,0.05) !important;
+    padding: 6px 10px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .cert-info h3 {
+    font-size: 0.82rem !important;
+    color: #232a36 !important;
+  }
+  .cert-issuer {
+    font-size: 0.76rem !important;
+    color: #6b7280 !important;
+  }
+  .cert-desc {
+    font-size: 0.76rem !important;
+    color: #454e5c !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+  }
+  .cert-link {
+    font-size: 0.76rem !important;
+    color: #101c36 !important;
+  }
+  .cert-link--doc {
+    color: #d4a72c !important;
+  }
+}
+
+.footer {
     display: block !important;
     text-align: center !important;
     padding-top: 8px !important;
