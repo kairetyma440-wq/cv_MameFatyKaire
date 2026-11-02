@@ -4,42 +4,52 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Bascule thème clair / sombre, mémorisée localement ---
+  // --- Bascule thème clair / sombre avec icône SVG vectorielle nette ---
   const toggleBtn = document.getElementById('theme-toggle');
 
+  const eyeSvg = `<svg class="eye-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>`;
+  const moonSvg = `<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12.3 2a10 10 0 00-1.9 19.8 10 10 0 0011.6-11.6A10 10 0 0112.3 2z"/></svg>`;
+
   const applyTheme = (theme) => {
-    document.body.classList.toggle('dark', theme === 'dark');
-    toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark', isDark);
+    if (toggleBtn) {
+      toggleBtn.innerHTML = isDark ? moonSvg : eyeSvg;
+      toggleBtn.title = isDark ? 'Passer en thème clair' : 'Passer en thème sombre';
+    }
   };
 
   const savedTheme = localStorage.getItem('cv-theme') || 'light';
   applyTheme(savedTheme);
 
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark');
-    const next = isDark ? 'light' : 'dark';
-    applyTheme(next);
-    localStorage.setItem('cv-theme', next);
-  });
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('cv-theme', next);
+    });
+  }
 
   // --- Bouton impression / export PDF ---
   const printBtn = document.getElementById('print-btn');
-  printBtn.addEventListener('click', () => window.print());
+  if (printBtn) {
+    printBtn.addEventListener('click', () => window.print());
+  }
 
-  // --- S'assurer que tous les éléments sont visibles pour le PDF / l'impression ---
+  // --- Réinitialiser les animations avant impression ---
   window.addEventListener('beforeprint', () => {
-    blocks.forEach(el => {
+    document.querySelectorAll('.block, .hero').forEach(el => {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
   });
 
-  // --- Apparition progressive des sections au scroll ---
+  // --- Apparition progressive au scroll (IntersectionObserver) ---
   const blocks = document.querySelectorAll('.block, .hero');
   blocks.forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(16px)';
-    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    el.style.transform = 'translateY(12px)';
+    el.style.transition = 'opacity .4s ease, transform .4s ease';
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -50,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
   blocks.forEach(el => observer.observe(el));
 });
