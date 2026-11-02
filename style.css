@@ -514,30 +514,20 @@ body {
 
 .xp-title {
   font-family: var(--font-h);
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--navy);
-  position: relative;
-  padding-left: 11px;
   letter-spacing: 0.15px;
-  line-height: 1.25;
-}
-
-.xp-title::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: -1px;
-  color: var(--bronze);
-  font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.3;
+  padding-left: 0;
+  margin-bottom: 2px;
 }
 
 /* Puces sous-projets */
 .m-dot-list {
   list-style: none;
-  padding-left: 11px;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5px;
@@ -733,7 +723,7 @@ body.dark .footer svg        { color: var(--gold-light); }
 
 /* ════════════════════════════════════════
    IMPRESSION / EXPORT PDF (1 PAGE A4 STRICTE)
-   Structure compacte, organisée, sans espaces vides
+   Mise en page équilibrée, remplissant harmonieusement la page
 ════════════════════════════════════════ */
 @media print {
   @page {
@@ -769,8 +759,8 @@ body.dark .footer svg        { color: var(--gold-light); }
     margin: 0 !important;
     padding: 0 !important;
     background: #ffffff !important;
-    font-size: 8pt !important;
-    line-height: 1.26 !important;
+    font-size: 8.4pt !important;
+    line-height: 1.33 !important;
     overflow: hidden !important;
     -webkit-print-color-adjust: exact !important;
   }
@@ -805,11 +795,11 @@ body.dark .footer svg        { color: var(--gold-light); }
     max-height: 297mm !important;
     background: linear-gradient(175deg, #09172c 0%, #0d203d 70%, #102649 100%) !important;
     color: #eef1f6 !important;
-    padding: 10mm 4.5mm 0mm 4.5mm !important;
+    padding: 13mm 4.5mm 0mm 4.5mm !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 3.5mm !important;
+    gap: 4.5mm !important;
     position: relative !important;
     overflow: hidden !important;
     -webkit-print-color-adjust: exact !important;
@@ -817,10 +807,10 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .profile-photo {
-    width: 88px !important;
-    height: 88px !important;
+    width: 92px !important;
+    height: 92px !important;
     border: 3.5px solid #b87a28 !important;
-    margin: 0 auto 1.5mm auto !important;
+    margin: 0 auto 2mm auto !important;
     overflow: hidden !important;
   }
 
@@ -833,51 +823,51 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .sidebar-section {
-    gap: 2mm !important;
+    gap: 2.5mm !important;
   }
 
   .sidebar-title {
-    font-size: 0.72rem !important;
-    padding-bottom: 1.5px !important;
-    margin-bottom: 1.5px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    font-size: 0.74rem !important;
+    padding-bottom: 2px !important;
+    margin-bottom: 2px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important;
     color: #ffffff !important;
   }
 
   .s-badge {
-    width: 18px !important;
-    height: 18px !important;
-    min-width: 18px !important;
+    width: 19px !important;
+    height: 19px !important;
+    min-width: 19px !important;
     background: #9c6729 !important;
   }
 
   .s-badge svg {
-    width: 9.5px !important;
-    height: 9.5px !important;
+    width: 10px !important;
+    height: 10px !important;
   }
 
   .skill-cat {
-    font-size: 0.63rem !important;
-    margin: 1.5px 0 0.5px !important;
+    font-size: 0.65rem !important;
+    margin: 2px 0 1px !important;
     color: #ffffff !important;
   }
 
   .s-dot-list {
-    gap: 1.2px !important;
+    gap: 1.5px !important;
   }
 
   .s-dot-list li {
-    font-size: 0.69rem !important;
-    line-height: 1.2 !important;
+    font-size: 0.71rem !important;
+    line-height: 1.25 !important;
     color: #dbe4f0 !important;
   }
 
   .contact-list {
-    gap: 2mm !important;
+    gap: 2.2mm !important;
   }
 
   .contact-list li {
-    font-size: 0.69rem !important;
+    font-size: 0.71rem !important;
     gap: 5px !important;
     color: #dbe4f0 !important;
   }
@@ -888,23 +878,23 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .lang-list {
-    gap: 2mm !important;
+    gap: 2.2mm !important;
   }
 
   .ln {
-    font-size: 0.7rem !important;
+    font-size: 0.72rem !important;
     color: #dbe4f0 !important;
   }
 
   .lb-pill {
-    font-size: 0.56rem !important;
-    padding: 1.5px 6px !important;
+    font-size: 0.58rem !important;
+    padding: 1.8px 7px !important;
     background: #134b7a !important;
     color: #ffffff !important;
   }
 
   .sidebar-deco {
-    height: 28mm !important;
+    height: 35mm !important;
   }
 
   /* MAIN CONTENT en impression */
@@ -912,21 +902,21 @@ body.dark .footer svg        { color: var(--gold-light); }
     width: 144mm !important;
     height: 297mm !important;
     max-height: 297mm !important;
-    padding: 9mm 8mm 7mm 8mm !important;
+    padding: 12mm 9mm 11mm 9mm !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 3mm !important;
+    gap: 4.5mm !important;
     background: #ffffff !important;
     page-break-after: avoid !important;
   }
 
   .hero {
-    padding-bottom: 2mm !important;
+    padding-bottom: 2.5mm !important;
   }
 
   .hero-text h1 {
-    font-size: 1.65rem !important;
+    font-size: 1.7rem !important;
     line-height: 1.05 !important;
   }
 
@@ -939,56 +929,56 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .subtitle {
-    font-size: 0.7rem !important;
-    margin-top: 1.5px !important;
+    font-size: 0.72rem !important;
+    margin-top: 2px !important;
     color: #174268 !important;
   }
 
   .hero-accent-bar {
-    width: 40px !important;
-    height: 2.5px !important;
+    width: 44px !important;
+    height: 3px !important;
     background: #b87a28 !important;
-    margin-top: 3px !important;
+    margin-top: 3.5px !important;
   }
 
   .block {
-    gap: 2px !important;
+    gap: 2.5mm !important;
   }
 
   .block-header {
-    padding-bottom: 1.5px !important;
-    margin-bottom: 2px !important;
+    padding-bottom: 1.8px !important;
+    margin-bottom: 2.2px !important;
     border-bottom: 1px solid #e5e7eb !important;
   }
 
   .block-title {
-    font-size: 0.78rem !important;
+    font-size: 0.82rem !important;
     color: #0b1a30 !important;
   }
 
   .icon {
-    width: 19px !important;
-    height: 19px !important;
-    min-width: 19px !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
     background: #9c6729 !important;
     color: #ffffff !important;
   }
 
   .icon svg {
-    width: 10px !important;
-    height: 10px !important;
+    width: 10.5px !important;
+    height: 10.5px !important;
   }
 
   .block-text {
-    font-size: 0.74rem !important;
-    line-height: 1.34 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.36 !important;
     color: #374151 !important;
     text-align: left !important;
   }
 
   .timeline-list {
-    gap: 2mm !important;
-    padding-left: 13px !important;
+    gap: 2.8mm !important;
+    padding-left: 14px !important;
   }
 
   .timeline-list::before {
@@ -997,57 +987,55 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .timeline-list li::before {
-    left: -13px !important;
-    width: 7px !important;
-    height: 7px !important;
+    left: -14px !important;
+    width: 7.5px !important;
+    height: 7.5px !important;
     background: #9c6729 !important;
   }
 
   .tl-row h3 {
-    font-size: 0.74rem !important;
+    font-size: 0.76rem !important;
     color: #0b1a30 !important;
   }
 
   .tl-date {
-    font-size: 0.68rem !important;
+    font-size: 0.7rem !important;
     color: #b87a28 !important;
   }
 
   .tl-sub {
-    font-size: 0.69rem !important;
+    font-size: 0.71rem !important;
     color: #64748b !important;
   }
 
   .xp-grid {
-    gap: 2mm 12px !important;
+    gap: 3mm 14px !important;
   }
 
   .xp-col {
-    gap: 2mm !important;
+    gap: 2.8mm !important;
   }
 
   .xp-entry {
-    gap: 1px !important;
+    gap: 1.5px !important;
   }
 
   .xp-title {
-    font-size: 0.7rem !important;
+    font-size: 0.74rem !important;
     color: #0b1a30 !important;
-  }
-
-  .xp-title::before {
-    color: #9c6729 !important;
+    padding-left: 0 !important;
   }
 
   .m-dot-list {
-    padding-left: 9px !important;
-    gap: 1px !important;
+    padding-left: 0 !important;
+    gap: 1.5px !important;
   }
 
   .m-dot-list li {
-    font-size: 0.68rem !important;
-    line-height: 1.22 !important;
+    font-size: 0.7rem !important;
+    line-height: 1.26 !important;
     color: #475569 !important;
+    padding-left: 9px !important;
   }
 
   .m-dot-list li::before {
@@ -1055,30 +1043,30 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .qa-section {
-    gap: 2mm 12px !important;
+    gap: 3mm 14px !important;
   }
 
   .cert-card {
-    padding: 5px 8px !important;
-    gap: 8px !important;
+    padding: 6px 10px !important;
+    gap: 10px !important;
     border: 1px solid #e5e7eb !important;
     background: #ffffff !important;
   }
 
   .cert-logo {
-    width: 38px !important;
-    height: 38px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 
   .cert-name {
-    font-size: 0.76rem !important;
+    font-size: 0.79rem !important;
     color: #0b1a30 !important;
   }
 
   .cert-org,
   .cert-meta,
   .cert-url {
-    font-size: 0.65rem !important;
+    font-size: 0.67rem !important;
     color: #64748b !important;
   }
 
@@ -1087,9 +1075,10 @@ body.dark .footer svg        { color: var(--gold-light); }
   }
 
   .footer {
-    margin-top: auto !important;
-    padding-top: 2.5mm !important;
-    font-size: 0.66rem !important;
+    padding-top: 3.5mm !important;
+    margin-top: 2.5mm !important;
+    border-top: 1px solid #e5e7eb !important;
+    font-size: 0.68rem !important;
     color: #64748b !important;
   }
 
